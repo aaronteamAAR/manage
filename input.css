@@ -46,7 +46,7 @@ body{
     height: 2px;
     background-color: black;
     transform: rotate(0);
-    transform: all 0.5s;
+    transition: all 0.5s;
 }
 
 .ham-mid{
