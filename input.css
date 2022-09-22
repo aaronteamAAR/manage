@@ -16,6 +16,22 @@ body{
 
 }
 
+table {
+    font-family: 'Sora', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
 @media(max-width: 576px) {
     body{
         background-position: 50px -50px;
