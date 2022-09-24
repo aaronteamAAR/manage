@@ -4,60 +4,193 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="input.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Get Started with Manage</title>
 </head>
 <body>
+    <nav class="relative container mx-auto p-6">
+        <div class="flex items-center justify-between">
+          <div class="pt-2">
+            <img src="./img/logo.svg" alt="Logo" />
+          </div>
+          <div class="hidden md:flex space-x-6">
+            <a href="" class="hover:text-darkGrayishBlue">Home</a>
+            <a href="#" class="hover:text-darkGrayishBlue">About Us</a>
+            <a href="./login.html" class="hover:text-darkGrayishBlue">Login</a>
+          </div>
+          <a
+            href="#"
+            class="hidden md:block p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
+            >Get started</a
+          >
+          <button
+            id="menu-btn"
+            class="block hamburger md:hidden focus:outline-none"
+          >
+            <span class="ham-top"></span>
+            <span class="ham-mid"></span>
+            <span class="ham-btm"></span>
+          </button>
+        </div>
+        <!-- mobile menu -->
+        <div class="md:hidden">
+          <div
+            id="menu"
+            class="absolute flex-col items-center self-end py-8 mt-10 space-y-6 hidden bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+          >
+          <a href="#" class="hover:text-darkGrayishBlue">Home</a>
+          <a href="#" class="hover:text-darkGrayishBlue">About Us</a>
+          <a href="./login.html" class="hover:text-darkGrayishBlue">Login</a>
+          </div>
+        </div>
+      </nav>
     <div class="login">
       <div class="left">
-        <h1>Sign up</h1>
-        <input type="text" id="email" placeholder="email" />
-
-        <input type="text" id="name" placeholder="Enter name" />
-        <input type="password" id="pass" placeholder="Password" />
-
-
-        <input type="password" name="signup_submit"  placeholder="Sign in" value="Sign Up"/>
+        <h1 class="text-5xl font-bold">Create new account<b class="dot">.</b></h1>
       </div>
     </div>
-    <button class="log" id="signup">Log in with google</button>
+    <div class="options space-x-4">
+        <form id="signup">
+          <label>Login</label>
+          <input type="text" name="login" />
+          <label>Password</label>
+          <input type="password" name="password" />
+          <button>sign up</button>
+        </form>
+    </div>
+
+    <!-- CTA  -->
+    <section class="bg-brightRed" id="cta">
+        <!-- Container -->
+        <div
+          class="container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0"
+        >
+          <!-- Haeding -->
+          <h2
+            class="text-5xl font-bold leading-tight text-center text-white md:text-4xl md:max-w-xl md:text-left"
+          >
+            Simplify how your team works today
+          </h2>
+          <a
+            href="#"
+            class="p-3 px-6 pt-2 text-brightRed bg-white rounded-full baseline shadow-2xl hover:bg-gray-900"
+            >Get started</a
+          >
+        </div>
+      </section>
+      <!-- footer -->
+      <footer class="bg-veryDarkBlue">
+        <div
+          class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0"
+        >
+          <div
+            class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start"
+          >
+            <div class="mx-auto my-6 text-center text-white md:hideen">
+              Copyright &copy; 2022, All Rights Reserved
+            </div>
+            <div>
+              <img class="h-8" src="img/logowhite.svg" alt="logo" />
+            </div>
+            <div class="flex justify-center space-x-4">
+            </div>
+          </div>
+          <div class="flex justify-around space-x-32">
+            <div class="flex flex-col space-y-3 text-white">
+              <a href="" class="hover:text-brightRed">Home</a>
+              <a href="" class="hover:text-brightRed">Pricing</a>
+              <a href="" class="hover:text-brightRed">Product</a>
+              <a href="" class="hover:text-brightRed">About</a>
+            </div>
+            <div class="flex flex-col space-y-3 text-white">
+              <a href="" class="hover:text-brightRed">Careers</a>
+              <a href="" class="hover:text-brightRed">Community</a>
+              <a href="" class="hover:text-brightRed">Privacy</a>
+            </div>
+          </div>
+          <div class="flex flex-col justify-between">
+            <form>
+              <div class="flex space-x-3">
+                <input
+                  type="text"
+                  class="flex-1 px-4 rounded-full focus:outline-none"
+                  placeholder="Updates"
+                />
+                <button
+                  class="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outlin-none"
+                >
+                  Go
+                </button>
+              </div>
+            </form>
+            <div class="hidden text-white md:block">
+              
+              Copyright &copy; 2022, All rights Reserved
+            </div>
+          </div>
+        </div>
+      </footer>
 </body>
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
-    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyCGlkezb_hKTLHJEvcfxSPz2UPjgdagvJo",
-      authDomain: "investmemt-d2a29.firebaseapp.com",
-      databaseURL: "https://investmemt-d2a29-default-rtdb.firebaseio.com",
-      projectId: "investmemt-d2a29",
-      storageBucket: "investmemt-d2a29.appspot.com",
-      messagingSenderId: "344271991783",
-      appId: "1:344271991783:web:298331c0ad65e7e8ad0342"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const database = getDatabase(app);
-    const auth = getAuth();
+<script src="./backend/script.js"></script>  
+<script src="https://wwww.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+<script src="https://wwww.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 
-    signup.addEventListener('click', (e) => {
-        var email = document.getElementById('email').value
-        var username = document.getElementById('name').value
-        var password = document.getElementById('pass').value
+<script>
+  import { initializeApp } from "firebase/app";
+const firebaseConfig = {
+  apiKey: "AIzaSyCGlkezb_hKTLHJEvcfxSPz2UPjgdagvJo",
+  authDomain: "investmemt-d2a29.firebaseapp.com",
+  databaseURL: "https://investmemt-d2a29-default-rtdb.firebaseio.com",
+  projectId: "investmemt-d2a29",
+  storageBucket: "investmemt-d2a29.appspot.com",
+  messagingSenderId: "344271991783",
+  appId: "1:344271991783:web:853584bf5831499bad0342"
+};
 
-        createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            const user = userCredential.user;
-            set(ref(database, 'users/' + user.uid),{
-                username: name,
-                email:
-            })
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+firebase.auth().setPersistence(firebase.auth.Auth.Persistence.None)
+
+document.getElementById('signup')
+  .addEventListener('click', function(e){
+    e.preventDefault()
+
+    const login = event.target.login.value
+    const password = event.target.password.value
+
+    firebase.auth().createUserWithEmailAndPassword(login, password)
+    .then(({user}) => {
+      return user.getIdToken().then((idToken) => {
+        return fetch("/sessionLogin",{
+          method: 'POST',
+        headers:{
+          Accept:'application/json',
+          "Content-type":"application/json",
+          "CSRF-Token": Cookies.get("XSRF-TOKEN")
+        },
+        body: JSON.stringify({idToken})
         })
-        .catch((error) => {
-            const errorCode = error.code
-     
+      })
+    })
+
+    .then(() => {
+      return firebase.auth().signOut()
+    })
+    .then(() => {
+      window.location.assign("/portfoilo.html")
+    })
+  })
+
+</script>
+</html>
